@@ -73,6 +73,7 @@
       "Item_Invasive_Clot": {},
       "Item_Radiant_Prominence": {},
       "Item_Sea_Siren_Torn_Fin": {},
+      "Item_Thunder_Strum": {},
       "Item_Charred_Bud_of_Twilight": {},
       "Item_Darkveil_Moonlight": {},
       "Item_Harbinger_of_Strife": {},
@@ -91,6 +92,8 @@
       "Item_Heavenly_Melody": {},
       "Item_Myriad_Fruit": {},
       "Item_Flower_of_Alaya": {},
+      "Item_The_Fluffy_Collector_Edition": {},
+      "Item_Lance_of_Retribution": {},
       "Item_Tracks_of_Destiny": {},
       "Item_Destroyer_Final_Road": {},
       "Item_Guardian_Lament": {},
@@ -109,7 +112,8 @@
       "Item_Dream_Making_Engine": {},
       "Item_Shards_of_Desires": {},
       "Item_Glory_Aspersed_Torso": {},
-      "Item_Eternal_Lament": {}
+      "Item_Eternal_Lament": {},
+      "Item_Lucid_Awl": {}
     },
     "PlannerTarget": {
       "Enable": false,
