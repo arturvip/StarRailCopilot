@@ -67,7 +67,7 @@ class SupportExtract(Dungeon, SupportDev):
             in: COMBAT_SUPPORT_LIST
         """
         tab = support_tab()
-        tab.set('Strangers', main=self)
+        tab.set('Support', main=self)
         scroll = self._support_scroll()
         scroll.set_bottom(main=self)
         scroll.set_top(main=self)

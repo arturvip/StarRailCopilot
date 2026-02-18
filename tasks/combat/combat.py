@@ -6,7 +6,8 @@ from tasks.base.page import page_guide
 from tasks.combat.assets.assets_combat_finish import COMBAT_AGAIN, COMBAT_EXIT
 from tasks.combat.assets.assets_combat_interact import DUNGEON_COMBAT_INTERACT
 from tasks.combat.assets.assets_combat_prepare import COMBAT_PREPARE
-from tasks.combat.assets.assets_combat_team import COMBAT_TEAM_PREPARE, COMBAT_TEAM_SUPPORT
+from tasks.combat.assets.assets_combat_support import COMBAT_TEAM_SUPPORT
+from tasks.combat.assets.assets_combat_team import COMBAT_TEAM_PREPARE
 from tasks.combat.fuel import Fuel
 from tasks.combat.interact import CombatInteract
 from tasks.combat.obtain import CombatObtain

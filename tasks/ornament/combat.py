@@ -3,12 +3,11 @@ from module.base.decorator import run_once
 from module.device.platform.utils import cached_property
 from module.exception import RequestHumanTakeover
 from module.logger import logger
-from module.ui.scroll import AdaptiveScroll
 from tasks.base.assets.assets_base_page import MAP_EXIT
 from tasks.base.assets.assets_base_popup import POPUP_CANCEL
 from tasks.character.keywords import CharacterList
 from tasks.combat.assets.assets_combat_prepare import COMBAT_PREPARE, WAVE_CHECK, WAVE_CHECK_SEARCH
-from tasks.combat.assets.assets_combat_support import COMBAT_SUPPORT_LIST, COMBAT_SUPPORT_LIST_SCROLL_OE
+from tasks.combat.assets.assets_combat_support import COMBAT_SUPPORT_LIST
 from tasks.combat.prepare import WaveDigit
 from tasks.dungeon.dungeon import Dungeon
 from tasks.dungeon.keywords import DungeonList
@@ -90,25 +89,17 @@ class OrnamentCombat(Dungeon, RouteLoader):
         self.oe_leave()
         return True
 
-    @staticmethod
-    def _support_scroll():
-        """
-        v3.2, Ornament has different support scroll so OrnamentCombat._support_scroll overrides
-        """
-        return AdaptiveScroll(area=COMBAT_SUPPORT_LIST_SCROLL_OE.area,
-                              name=COMBAT_SUPPORT_LIST_SCROLL_OE.name)
-
-    def _search_support_with_fallback(self, support_character_name: str = "JingYuan"):
+    def _search_support_with_fallback(self, name: str = "JingYuan"):
         # In Ornament Extraction, first character isn't selected by default
-        if support_character_name == "FirstCharacter":
+        if name == "FirstCharacter":
             self._select_first()
             return True
-        return super()._search_support_with_fallback(support_character_name)
+        return super()._search_support_with_fallback(name)
 
-    def support_set(self, support_character_name: str = "FirstCharacter"):
+    def support_set(self, name: str = "FirstCharacter"):
         """
         Args:
-            support_character_name: Support character name
+            name: Support character name
 
         Returns:
             bool: If clicked
@@ -119,8 +110,8 @@ class OrnamentCombat(Dungeon, RouteLoader):
             out: COMBAT_PREPARE
         """
         logger.hr("Combat support")
-        if isinstance(support_character_name, CharacterList):
-            support_character_name = support_character_name.name
+        if isinstance(name, CharacterList):
+            name = name.name
         self.interval_clear(SUPPORT_ADD)
         skip_first_screenshot = True
         selected_support = False
@@ -151,7 +142,7 @@ class OrnamentCombat(Dungeon, RouteLoader):
                 if not selected_support:
                     # Search support
                     if not selected_support:
-                        self._search_support_with_fallback(support_character_name)
+                        self._search_support_with_fallback(name)
                         selected_support = True
                 self.device.click(SUPPORT_ADD)
                 self.interval_reset(COMBAT_SUPPORT_LIST)
