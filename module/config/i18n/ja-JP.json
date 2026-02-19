@@ -31,8 +31,8 @@
       "help": "Task.Dungeon.help"
     },
     "Ornament": {
-      "name": "Task.Ornament.name",
-      "help": "Task.Ornament.help"
+      "name": "オーナメント抽出",
+      "help": "「オーナメント抽出」を実行するには、以下の条件を満たす必要があります：\n月に一度、事前に「差分宇宙」を手動でクリアし、セーブデータを保存しておくこと。"
     },
     "DailyQuest": {
       "name": "Task.DailyQuest.name",
