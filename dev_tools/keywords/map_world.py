@@ -37,7 +37,7 @@ class GenerateMapWorld(GenerateKeyword):
             short_name='Amphoreus'
         )
         yield dict(
-            text_id=to_id('Planarcadia'),
+            text_id=self.find_keyword('二相乐园', lang='cn')[0],
             world_id=5,
             short_name='Planarcadia'
         )
