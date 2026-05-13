@@ -13,6 +13,16 @@ CLAIM_ALL = ButtonWrapper(
         button=(908, 499, 1183, 535),
     ),
 )
+DISCARD_FuelVouchers = ButtonWrapper(
+    name='DISCARD_FuelVouchers',
+    share=Button(
+        file='./assets/share/rogue/weekly/DISCARD_FuelVouchers.png',
+        area=(431, 488, 455, 512),
+        search=(349, 481, 485, 520),
+        color=(138, 78, 72),
+        button=(431, 488, 455, 512),
+    ),
+)
 REWARD_CHECK = ButtonWrapper(
     name='REWARD_CHECK',
     share=Button(
